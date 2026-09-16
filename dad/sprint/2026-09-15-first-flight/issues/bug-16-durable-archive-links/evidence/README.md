@@ -32,3 +32,13 @@ node /private/tmp/durable-archive-links-evidence/check-links.mjs check \
 ```
 
 Repeat with `--stage post-delete`. Check mode parses both remote rendered bodies and rendered local mirrors, requires one identical set of three links on each surface, verifies the published commit and target bytes, and checks merged PR status plus absent remote branch in post-delete mode. Each run writes a uniquely named JSON record containing rendered HTML, hrefs, statuses, content hashes, and outcomes. Final leaf-specific results will be appended here by the coordinator.
+
+## Leaf Publication
+
+Archive `openspec/changes/archive/2026-09-16-durable-archive-links` was committed and pushed first at `22662b04e23ac1d2284fe8b35b175c06f18f5951`. Only then were its absolute proposal/design/tasks URLs appended to PR #17, issue #16, and both local mirrors.
+
+Before merge: all four GitHub-rendered surfaces contained exactly the same three pinned hrefs. All three authenticated contents reads returned HTTP 200 and matched both API blob hashes and local Git bytes. [Pre-merge observations](pre-merge.json) retain rendered HTML, parsed hrefs, request outcomes, and target hashes.
+
+Unit and merge gates passed: typecheck, 26 unit tests, 14 browser cases, production build, and strict OpenSpec (4/4 before archive; 3/3 afterward). Logs: `/private/tmp/first-flight-suite-FAxZel/unit.log` and `/private/tmp/first-flight-suite-TGwino/{full,openspec-strict}.log`. Independent verification found no issues. Lint is unconfigured; the existing bundle-size advisory remains.
+
+Post-deletion verification: pending the authorized merge and child-branch deletion.

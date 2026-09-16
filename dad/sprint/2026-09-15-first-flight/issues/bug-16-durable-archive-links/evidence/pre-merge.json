@@ -1,0 +1,147 @@
+{
+  "mode": "check",
+  "stage": "pre-merge",
+  "testedAt": "2026-09-16T05:39:07.171Z",
+  "repository": "greff-ai/benchmark-flappy-bird",
+  "sha": "22662b04e23ac1d2284fe8b35b175c06f18f5951",
+  "archive": "openspec/changes/archive/2026-09-16-durable-archive-links",
+  "expected": [
+    "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md",
+    "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md",
+    "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md"
+  ],
+  "requests": [
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/commits/22662b04e23ac1d2284fe8b35b175c06f18f5951",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/pulls/17",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/issues/16",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "markdown",
+      "method": "POST",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "markdown",
+      "method": "POST",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/contents/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md?ref=22662b04e23ac1d2284fe8b35b175c06f18f5951",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/contents/openspec/changes/archive/2026-09-16-durable-archive-links/design.md?ref=22662b04e23ac1d2284fe8b35b175c06f18f5951",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/contents/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md?ref=22662b04e23ac1d2284fe8b35b175c06f18f5951",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    }
+  ],
+  "surfaces": [
+    {
+      "name": "remote-pr",
+      "body_html": "<h2 dir=\"auto\">Summary</h2>\n<p dir=\"auto\">Publish archive links as absolute GitHub blob URLs pinned to a published commit. The benchmark installs the corrected dad instructions and records live GitHub rendering and file-target verification for the archive-first publication sequence.</p>\n<h2 dir=\"auto\">Changes</h2>\n<ul dir=\"auto\">\n<li>Refresh the installed archive and PR-body references from the validated source payload.</li>\n<li>Commit and publish archives before generating identical pinned links for the issue, PR, and both local mirrors.</li>\n<li>Record the relative-link regression and corrected candidate-link checks, then verify this leaf's own links before merge and after child-branch deletion.</li>\n</ul>\n<p dir=\"auto\">Validation: typecheck, 26 unit tests, strict OpenSpec validation, and live candidate-link checks pass. The full merge suite and leaf-specific publication checks follow at the merge gates.</p>\n<h2 dir=\"auto\">Openspec change</h2>\n<p dir=\"auto\">durable-archive-links (documentation only; no specification sync needed)</p>\n<p dir=\"auto\">Issue directory: <code class=\"notranslate\">dad/sprint/2026-09-15-first-flight/issues/bug-16-durable-archive-links</code></p>\n<p dir=\"auto\"><span class=\"issue-keyword\">Closes</span> <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470504228\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/16\" data-hovercard-type=\"issue\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/issues/16/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/16\">#16</a></p>\n<h2 dir=\"auto\">Merge verification</h2>\n<p dir=\"auto\">Typecheck, 26 unit tests, 14 browser cases, production build, and strict OpenSpec validation passed. The archive was committed and pushed before these URLs were generated. Live rendered-href and target-content checks are recorded in this issue's evidence directory.</p>\n<h2 dir=\"auto\">Archived openspec change</h2>\n<ul dir=\"auto\">\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md\">Proposal</a></li>\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md\">Design</a></li>\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md\">Tasks</a></li>\n</ul>",
+      "hrefs": [
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md"
+      ]
+    },
+    {
+      "name": "remote-issue",
+      "body_html": "<h2 dir=\"auto\">Summary</h2>\n<p dir=\"auto\">Final sprint review found a dad documentation defect: GitHub renders archive links in PR bodies with literal relative hrefs such as openspec/changes/archive/.../proposal.md. Those resolve relative to the PR page, not the repository file tree.</p>\n<h2 dir=\"auto\">Reproduction</h2>\n<p dir=\"auto\">PR <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470398837\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/15\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/pull/15/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/pull/15\">#15</a>'s GitHub HTML API response preserves the relative archive href. Archived files exist in the merged sprint, but that href does not address their repository blob URL.</p>\n<h2 dir=\"auto\">Expected behavior</h2>\n<p dir=\"auto\">Publish absolute forge blob/tree URLs pinned to a published commit containing the target. Leaf archives must be committed and pushed before generating links; local mirrors and tracker/PR bodies agree. Links remain usable after deleting the child branch.</p>\n<h2 dir=\"auto\">Scope</h2>\n<p dir=\"auto\">Refresh the benchmark's installed dad payload from the corrected source, preserving unrelated workflows. Add concise regression evidence for the source link instruction and run this leaf with the new archive-link order. Validate GitHub-rendered hrefs, authenticated file existence at the pinned commit, and usability after merge/branch deletion. No gameplay changes. The final sprint PR will provide working commit-pinned links to all completed archives; historical merged PR bodies are not rewritten.</p>\n<h2 dir=\"auto\">Definition of done</h2>\n<ul dir=\"auto\">\n<li>Installed dad matches corrected source exactly; unrelated OpenSpec workflows are preserved.</li>\n<li>This leaf's proposal/design/tasks links are absolute, commit-pinned, and identical across issue/PR/local mirrors.</li>\n<li>GitHub rendering preserves those absolute hrefs and targets are readable after branch deletion.</li>\n<li>Full tests, typecheck, build, and strict OpenSpec validation remain green.</li>\n</ul>\n<h2 dir=\"auto\">Size</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> single-branch</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Incomplete task\"> multi-branch</li>\n</ul>\n<h2 dir=\"auto\">Links</h2>\n<ul dir=\"auto\">\n<li><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5469313166\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/1\" data-hovercard-type=\"issue\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/issues/1/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/1\">#1</a></li>\n<li><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470398837\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/15\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/pull/15/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/pull/15\">#15</a></li>\n</ul>\n<p dir=\"auto\">Related: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5469313166\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/1\" data-hovercard-type=\"issue\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/issues/1/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/1\">#1</a></p>\n<p dir=\"auto\">Working branch: <code class=\"notranslate\">bug/16-durable-archive-links</code></p>\n<h2 dir=\"auto\">Implementation outcome</h2>\n<p dir=\"auto\">Refreshed the corrected archive and PR-body instructions. All 39 installed dad files match source; seven unrelated installed files retain their hashes. Live preflight reproduced PR <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470398837\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/15\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/pull/15/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/pull/15\">#15</a>'s three relative hrefs and verified three GitHub-rendered absolute candidate links and their exact target bytes at a published commit.</p>\n<p dir=\"auto\">Typecheck, 26 unit tests, and strict OpenSpec validation pass. This documentation-only change requires no game specification sync. Its own archive links will be checked across both remote bodies and both local mirrors before merge and after remote branch deletion.</p>\n<p dir=\"auto\">Deviations from original issue: none. Historical merged PR bodies remain historical; the final sprint PR will provide commit-pinned archive links.</p>\n<h2 dir=\"auto\">Merge verification</h2>\n<p dir=\"auto\">Typecheck, 26 unit tests, 14 browser cases, production build, and strict OpenSpec validation passed. The archive was committed and pushed before these URLs were generated. Live rendered-href and target-content checks are recorded in this issue's evidence directory.</p>\n<h2 dir=\"auto\">Archived openspec change</h2>\n<ul dir=\"auto\">\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md\">Proposal</a></li>\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md\">Design</a></li>\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md\">Tasks</a></li>\n</ul>",
+      "hrefs": [
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md"
+      ]
+    },
+    {
+      "name": "local-pr",
+      "body_html": "<h2 dir=\"auto\">Summary</h2>\n<p dir=\"auto\">Publish archive links as absolute GitHub blob URLs pinned to a published commit. The benchmark installs the corrected dad instructions and records live GitHub rendering and file-target verification for the archive-first publication sequence.</p>\n<h2 dir=\"auto\">Changes</h2>\n<ul dir=\"auto\">\n<li>Refresh the installed archive and PR-body references from the validated source payload.</li>\n<li>Commit and publish archives before generating identical pinned links for the issue, PR, and both local mirrors.</li>\n<li>Record the relative-link regression and corrected candidate-link checks, then verify this leaf's own links before merge and after child-branch deletion.</li>\n</ul>\n<p dir=\"auto\">Validation: typecheck, 26 unit tests, strict OpenSpec validation, and live candidate-link checks pass. The full merge suite and leaf-specific publication checks follow at the merge gates.</p>\n<h2 dir=\"auto\">Openspec change</h2>\n<p dir=\"auto\">durable-archive-links (documentation only; no specification sync needed)</p>\n<p dir=\"auto\">Issue directory: <code class=\"notranslate\">dad/sprint/2026-09-15-first-flight/issues/bug-16-durable-archive-links</code></p>\n<p dir=\"auto\">PR: 17 <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470626191\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/17\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/pull/17/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/pull/17\">#17</a></p>\n<h2 dir=\"auto\">Merge verification</h2>\n<p dir=\"auto\">Typecheck, 26 unit tests, 14 browser cases, production build, and strict OpenSpec validation passed. The archive was committed and pushed before these URLs were generated. Live rendered-href and target-content checks are recorded in this issue's evidence directory.</p>\n<h2 dir=\"auto\">Archived openspec change</h2>\n<ul dir=\"auto\">\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md\">Proposal</a></li>\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md\">Design</a></li>\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md\">Tasks</a></li>\n</ul>",
+      "hrefs": [
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md"
+      ]
+    },
+    {
+      "name": "local-issue",
+      "body_html": "<h1 dir=\"auto\">Publish durable archive links in workflow evidence</h1>\n<p dir=\"auto\">Issue: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470504228\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/16\" data-hovercard-type=\"issue\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/issues/16/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/16\">#16</a></p>\n<h2 dir=\"auto\">Summary</h2>\n<p dir=\"auto\">Final sprint review found a dad documentation defect: GitHub renders archive links in PR bodies with literal relative hrefs such as openspec/changes/archive/.../proposal.md. Those resolve relative to the PR page, not the repository file tree.</p>\n<h2 dir=\"auto\">Reproduction</h2>\n<p dir=\"auto\">PR <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470398837\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/15\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/pull/15/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/pull/15\">#15</a>'s GitHub HTML API response preserves the relative archive href. Archived files exist in the merged sprint, but that href does not address their repository blob URL.</p>\n<h2 dir=\"auto\">Expected behavior</h2>\n<p dir=\"auto\">Publish absolute forge blob/tree URLs pinned to a published commit containing the target. Leaf archives must be committed and pushed before generating links; local mirrors and tracker/PR bodies agree. Links remain usable after deleting the child branch.</p>\n<h2 dir=\"auto\">Scope</h2>\n<p dir=\"auto\">Refresh the benchmark's installed dad payload from the corrected source, preserving unrelated workflows. Add concise regression evidence for the source link instruction and run this leaf with the new archive-link order. Validate GitHub-rendered hrefs, authenticated file existence at the pinned commit, and usability after merge/branch deletion. No gameplay changes. The final sprint PR will provide working commit-pinned links to all completed archives; historical merged PR bodies are not rewritten.</p>\n<h2 dir=\"auto\">Definition of done</h2>\n<ul dir=\"auto\">\n<li>Installed dad matches corrected source exactly; unrelated OpenSpec workflows are preserved.</li>\n<li>This leaf's proposal/design/tasks links are absolute, commit-pinned, and identical across issue/PR/local mirrors.</li>\n<li>GitHub rendering preserves those absolute hrefs and targets are readable after branch deletion.</li>\n<li>Full tests, typecheck, build, and strict OpenSpec validation remain green.</li>\n</ul>\n<h2 dir=\"auto\">Size</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> single-branch</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Incomplete task\"> multi-branch</li>\n</ul>\n<h2 dir=\"auto\">Links</h2>\n<ul dir=\"auto\">\n<li><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5469313166\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/1\" data-hovercard-type=\"issue\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/issues/1/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/1\">#1</a></li>\n<li><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470398837\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/15\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/pull/15/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/pull/15\">#15</a></li>\n</ul>\n<p dir=\"auto\">Related: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5469313166\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/1\" data-hovercard-type=\"issue\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/issues/1/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/1\">#1</a></p>\n<p dir=\"auto\">Working branch: <code class=\"notranslate\">bug/16-durable-archive-links</code></p>\n<h2 dir=\"auto\">Implementation outcome</h2>\n<p dir=\"auto\">Refreshed the corrected archive and PR-body instructions. All 39 installed dad files match source; seven unrelated installed files retain their hashes. Live preflight reproduced PR <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5470398837\" data-permission-text=\"Title is private\" data-url=\"https://github.com/greff-ai/benchmark-flappy-bird/issues/15\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/greff-ai/benchmark-flappy-bird/pull/15/hovercard\" href=\"https://github.com/greff-ai/benchmark-flappy-bird/pull/15\">#15</a>'s three relative hrefs and verified three GitHub-rendered absolute candidate links and their exact target bytes at a published commit.</p>\n<p dir=\"auto\">Typecheck, 26 unit tests, and strict OpenSpec validation pass. This documentation-only change requires no game specification sync. Its own archive links will be checked across both remote bodies and both local mirrors before merge and after remote branch deletion.</p>\n<p dir=\"auto\">Deviations from original issue: none. Historical merged PR bodies remain historical; the final sprint PR will provide commit-pinned archive links.</p>\n<h2 dir=\"auto\">Merge verification</h2>\n<p dir=\"auto\">Typecheck, 26 unit tests, 14 browser cases, production build, and strict OpenSpec validation passed. The archive was committed and pushed before these URLs were generated. Live rendered-href and target-content checks are recorded in this issue's evidence directory.</p>\n<h2 dir=\"auto\">Archived openspec change</h2>\n<ul dir=\"auto\">\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md\">Proposal</a></li>\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md\">Design</a></li>\n<li><a href=\"https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md\">Tasks</a></li>\n</ul>",
+      "hrefs": [
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "path": "openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md",
+      "url": "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md",
+      "commit": "22662b04e23ac1d2284fe8b35b175c06f18f5951",
+      "httpStatus": 200,
+      "blobSha": "a8f90b293dec45942690dff9b1921dcfc290c2f6",
+      "sha256": "6cb686f8917cffbaa7052e4448471d3a224c9846d64f05c82ca4b04f62acd768",
+      "bytes": 1205,
+      "localGitContentEqual": true
+    },
+    {
+      "path": "openspec/changes/archive/2026-09-16-durable-archive-links/design.md",
+      "url": "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md",
+      "commit": "22662b04e23ac1d2284fe8b35b175c06f18f5951",
+      "httpStatus": 200,
+      "blobSha": "de2ef59e9b94c06bb88c494848ea1514cc0f8aaf",
+      "sha256": "df077851a1df35454d87185d3d9c358d5ee24c70c9579d0fcf44e8c17a517fbb",
+      "bytes": 3554,
+      "localGitContentEqual": true
+    },
+    {
+      "path": "openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md",
+      "url": "https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md",
+      "commit": "22662b04e23ac1d2284fe8b35b175c06f18f5951",
+      "httpStatus": 200,
+      "blobSha": "feceed24e5a4505a8e5b968c3d877883db7de8c6",
+      "sha256": "e131b3d134e6ab8782036571689261c6bb74416ee218487e6a77a44b59d35a62",
+      "bytes": 1454,
+      "localGitContentEqual": true
+    }
+  ],
+  "outcome": "pass",
+  "publishedCommit": "22662b04e23ac1d2284fe8b35b175c06f18f5951",
+  "pr": {
+    "number": 17,
+    "head": "bug/16-durable-archive-links",
+    "base": "sprint/2026-09-15-first-flight",
+    "merged": false,
+    "state": "open",
+    "mergeCommit": "d977efd15f00988a3d181b03203cab5c08781c2c"
+  },
+  "issue": {
+    "number": 16,
+    "state": "open"
+  }
+}
