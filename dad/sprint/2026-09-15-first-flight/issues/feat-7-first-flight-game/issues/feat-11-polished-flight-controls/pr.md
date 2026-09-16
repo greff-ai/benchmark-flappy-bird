@@ -18,3 +18,9 @@ Validation: typecheck, 26 unit tests, 10 desktop/mobile browser tests, productio
 Issue directory: `dad/sprint/2026-09-15-first-flight/issues/feat-7-first-flight-game/issues/feat-11-polished-flight-controls`
 
 PR: 13 https://github.com/greff-ai/benchmark-flappy-bird/pull/13
+
+## Archived openspec change
+
+- [Proposal](openspec/changes/archive/2026-09-15-polished-flight-controls/proposal.md)
+- [Design](openspec/changes/archive/2026-09-15-polished-flight-controls/design.md)
+- [Tasks](openspec/changes/archive/2026-09-15-polished-flight-controls/tasks.md)
