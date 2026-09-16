@@ -7,7 +7,7 @@ parent: main
 directory: dad/sprint/2026-09-15-first-flight
 created: 2026-09-15
 pr: none
-updated: 2026-09-15
+updated: 2026-09-16
 
 ## Rows
 
@@ -37,15 +37,15 @@ updated: 2026-09-15
   halt: none
   warnings: optional lint unset; bundle-size advisory; early issue10 installed-CLI usage
 
-- [ ] 3. 8 - Verify real-browser gameplay and rendering
+- [x] 3. 8 - Verify real-browser gameplay and rendering
   type: task
   size: single-branch
   branch: task/8-verify-gameplay-rendering
   dir: dad/sprint/2026-09-15-first-flight/issues/task-8-verify-gameplay-rendering
   depends on: 7
-  state: running
-  sub-step: none
-  pr: none
-  archived: none
+  state: done
+  sub-step: done
+  pr: 15 https://github.com/greff-ai/benchmark-flappy-bird/pull/15
+  archived: openspec/changes/archive/2026-09-16-verify-gameplay-rendering
   halt: none
-  warnings: none
+  warnings: existing bundle-size advisory; lint unconfigured
