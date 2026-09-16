@@ -25,7 +25,9 @@ Use `references/shared/cli.md` for commands,
    ISSUE_DIR/issue.md committed there. Fast-forward a behind local container;
    ahead/diverged is CONFLICT for this child.
 5. Fresh row: refuse an existing local/remote child branch or colliding active/
-   archived change. Create the child from origin's container branch.
+   archived change. Create the child from origin's container branch with
+   `git switch --no-track -c <child> origin/<container>`. Publish explicitly
+   with `git push -u origin <child>`; never inherit the parent's upstream.
    Retry: checkout the existing child, fast-forward from origin if behind;
    divergence halts. A missing branch is creatable only before the branch
    checkpoint. Check the checkpoint evidence before skipping any completed work.

@@ -30,3 +30,19 @@ Related: #1
 ## Benchmark maintenance
 
 As part of this verification task, refresh the nine installed dad skill directories from the locally validated source payload after recording benchmark-driven fixes. Preserve the installed OpenSpec workflows and all unrelated files. Verify the refreshed payload and rerun dad init, then include the update in this task's scoped commit and PR. This leaves the benchmark itself using the corrected skills instead of relying only on an external DAD_SKILL_DIR override.
+
+Working branch: `task/8-verify-gameplay-rendering`
+
+## Verification outcome
+
+Desktop and mobile real-input gameplay passes, including two earned points, collision/restart, pause/resume, mute, and best-score reload. Added compact 320x568/568x320 framing and native-clock input/motion checks; fixed crash text covering the fallen bird on short viewports. Verification passes 26 unit tests, 14 browser cases, typecheck, build, and strict OpenSpec validation.
+
+Refreshed all nine installed dad skill directories: 39 files match source bytes, seven unrelated files remain unchanged, and installed init passes all 11 checks. Stable screenshots, metrics, and the verification report are in `dad/sprint/2026-09-15-first-flight/issues/task-8-verify-gameplay-rendering/evidence/`.
+
+Deviations from original issue: none. The narrow layout repair and installed-skill maintenance are within its approved scope. Existing bundle-size advisory remains; lint is not configured.
+
+## Archived openspec change
+
+- [Proposal](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md)
+- [Design](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md)
+- [Tasks](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md)

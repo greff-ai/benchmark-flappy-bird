@@ -32,7 +32,9 @@ halt, resume token, and PR. Use `references/shared/cli.md` and
    Check a known PR for merged/closed state before any branch creation.
 2. A merged PR uses shared ledger recovery, even if its branch was deleted.
    Fresh work rejects existing branch/ledger collisions. Otherwise create
-   from origin's parent, or checkout and fast-forward the existing retry
+   from origin's parent using `git switch --no-track -c <child> origin/<parent>`;
+   publish with `git push -u origin <child>`, never the parent's upstream.
+   On retry, checkout and fast-forward the existing
    branch. Divergence halts. Resume tokens plan/execute/merge-test require the
    nested ledger; merge requires confirmed PR evidence and skips branch work.
 3. Move the issue to active; append the working branch once and commit/push
