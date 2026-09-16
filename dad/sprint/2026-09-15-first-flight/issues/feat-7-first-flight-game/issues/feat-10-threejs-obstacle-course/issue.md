@@ -29,3 +29,7 @@ A complete playable loop is one independently testable milestone.
 - https://github.com/greff-ai/benchmark-flappy-bird/issues/7
 
 Working branch: `feat/10-threejs-obstacle-course`
+
+## Deviations
+
+None. Pause, sound, and persistent records remain scoped to issue #11.
