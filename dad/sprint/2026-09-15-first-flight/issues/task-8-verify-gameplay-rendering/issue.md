@@ -46,3 +46,5 @@ Deviations from original issue: none. The narrow layout repair and installed-ski
 - [Proposal](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md)
 - [Design](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md)
 - [Tasks](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md)
+
+Merged in PR https://github.com/greff-ai/benchmark-flappy-bird/pull/15
