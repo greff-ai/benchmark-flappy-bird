@@ -40,3 +40,9 @@ Desktop and mobile real-input gameplay passes, including two earned points, coll
 Refreshed all nine installed dad skill directories: 39 files match source bytes, seven unrelated files remain unchanged, and installed init passes all 11 checks. Stable screenshots, metrics, and the verification report are in `dad/sprint/2026-09-15-first-flight/issues/task-8-verify-gameplay-rendering/evidence/`.
 
 Deviations from original issue: none. The narrow layout repair and installed-skill maintenance are within its approved scope. Existing bundle-size advisory remains; lint is not configured.
+
+## Archived openspec change
+
+- [Proposal](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md)
+- [Design](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md)
+- [Tasks](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md)

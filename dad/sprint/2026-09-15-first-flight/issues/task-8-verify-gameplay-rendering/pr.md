@@ -18,3 +18,9 @@ verify-gameplay-rendering
 Issue directory: `dad/sprint/2026-09-15-first-flight/issues/task-8-verify-gameplay-rendering`
 
 PR: 15 https://github.com/greff-ai/benchmark-flappy-bird/pull/15
+
+## Archived openspec change
+
+- [Proposal](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md)
+- [Design](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md)
+- [Tasks](openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md)
