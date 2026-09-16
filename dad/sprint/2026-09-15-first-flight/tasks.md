@@ -50,15 +50,15 @@ updated: 2026-09-16
   halt: none
   warnings: existing bundle-size advisory; lint unconfigured
 
-- [ ] 4. 16 - Publish durable archive links in workflow evidence
+- [x] 4. 16 - Publish durable archive links in workflow evidence
   type: bug
   size: single-branch
   branch: bug/16-durable-archive-links
   dir: dad/sprint/2026-09-15-first-flight/issues/bug-16-durable-archive-links
   depends on: 8
-  state: running
-  sub-step: none
-  pr: none
-  archived: none
+  state: done
+  sub-step: done
+  pr: 17 https://github.com/greff-ai/benchmark-flappy-bird/pull/17
+  archived: openspec/changes/archive/2026-09-16-durable-archive-links
   halt: none
-  warnings: none
+  warnings: existing bundle-size advisory; lint unconfigured
