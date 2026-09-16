@@ -61,3 +61,14 @@ Resolves needs issue: Build the first-flight Flappy Bird game -> #7
 Resolves needs issue: Verify real-browser gameplay and rendering -> #8
 
 Working in branch: sprint/2026-09-15-first-flight
+
+## Added after verification - 2026-09-16
+
+| Issue | Title | Type | Size | Status |
+| --- | --- | --- | --- | --- |
+| #16 | Publish durable archive links in workflow evidence | bug | single-branch | new |
+
+## Plan
+1. #16: Correct and verify installed dad's commit-pinned archive links after GitHub rendering exposed broken relative URLs; after #8
+
+This narrow follow-up is driven by the approved benchmark's final evidence review; it changes no gameplay and leaves the final sprint PR open for human review.
