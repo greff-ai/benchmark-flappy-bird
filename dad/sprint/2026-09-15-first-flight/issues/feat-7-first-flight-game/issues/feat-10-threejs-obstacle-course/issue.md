@@ -39,3 +39,5 @@ None. Pause, sound, and persistent records remain scoped to issue #11.
 - [Proposal](openspec/changes/archive/2026-09-15-threejs-obstacle-course/proposal.md)
 - [Design](openspec/changes/archive/2026-09-15-threejs-obstacle-course/design.md)
 - [Tasks](openspec/changes/archive/2026-09-15-threejs-obstacle-course/tasks.md)
+
+Merged in PR https://github.com/greff-ai/benchmark-flappy-bird/pull/12
