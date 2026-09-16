@@ -17,3 +17,9 @@ Validation: typecheck, six unit tests, four desktop/mobile browser tests, and pr
 Issue directory: `dad/sprint/2026-09-15-first-flight/issues/feat-7-first-flight-game/issues/feat-10-threejs-obstacle-course`
 
 PR: 12 https://github.com/greff-ai/benchmark-flappy-bird/pull/12
+
+## Archived openspec change
+
+- [Proposal](openspec/changes/archive/2026-09-15-threejs-obstacle-course/proposal.md)
+- [Design](openspec/changes/archive/2026-09-15-threejs-obstacle-course/design.md)
+- [Tasks](openspec/changes/archive/2026-09-15-threejs-obstacle-course/tasks.md)

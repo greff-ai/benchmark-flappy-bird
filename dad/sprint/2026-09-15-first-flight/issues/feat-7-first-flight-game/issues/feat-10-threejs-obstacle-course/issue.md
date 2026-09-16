@@ -33,3 +33,9 @@ Working branch: `feat/10-threejs-obstacle-course`
 ## Deviations
 
 None. Pause, sound, and persistent records remain scoped to issue #11.
+
+## Archived openspec change
+
+- [Proposal](openspec/changes/archive/2026-09-15-threejs-obstacle-course/proposal.md)
+- [Design](openspec/changes/archive/2026-09-15-threejs-obstacle-course/design.md)
+- [Tasks](openspec/changes/archive/2026-09-15-threejs-obstacle-course/tasks.md)
