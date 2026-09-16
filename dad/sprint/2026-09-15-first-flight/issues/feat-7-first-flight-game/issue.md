@@ -59,3 +59,5 @@ Resolved planned item "Polish controls, sound, and persistent records" to #11.
 ## Plan
 1. #10: Play a complete real-physics flight with once-per-gate scoring, collision game-over, and restart; none
 2. #11: Pause and resume, control sound, retain a personal best, and use accessible responsive controls; after #10
+
+Issue PR: https://github.com/greff-ai/benchmark-flappy-bird/pull/14

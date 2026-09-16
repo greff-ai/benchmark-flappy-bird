@@ -6,7 +6,7 @@ branch: feat/7-first-flight-game
 parent: sprint/2026-09-15-first-flight
 directory: dad/sprint/2026-09-15-first-flight/issues/feat-7-first-flight-game
 created: 2026-09-15
-pr: none
+pr: 14 https://github.com/greff-ai/benchmark-flappy-bird/pull/14
 updated: 2026-09-15
 
 ## Rows
