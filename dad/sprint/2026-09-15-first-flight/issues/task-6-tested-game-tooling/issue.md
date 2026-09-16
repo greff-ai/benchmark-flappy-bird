@@ -31,3 +31,9 @@ Working branch: task/6-tested-game-tooling
 ## Implementation deviations
 
 None. The application remains a minimal rendered physics foundation; gameplay belongs to the following feature.
+
+## Archived openspec change
+
+- [Proposal](openspec/changes/archive/2026-09-15-tested-game-tooling/proposal.md)
+- [Design](openspec/changes/archive/2026-09-15-tested-game-tooling/design.md)
+- [Tasks](openspec/changes/archive/2026-09-15-tested-game-tooling/tasks.md)
