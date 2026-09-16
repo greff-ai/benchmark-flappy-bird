@@ -1,7 +1,11 @@
 # benchmark-flappy-bird
 
-A minimal Three.js application foundation with independently stepped Matter.js
-physics. Gameplay is developed in the next feature.
+First Flight is an original full-screen Three.js flight game with deterministic
+Matter.js physics. Fly with Space, ArrowUp, or a tap on the playfield. Clear each
+green gate for one point; use the restart control after a crash. Pause/resume
+and sound controls are in the upper-right toolbar. Leaving the page pauses
+flight until explicitly resumed. BEST persists across visits when browser
+storage is available; blocked storage keeps a record for the current session.
 
 ## Prerequisites
 
@@ -37,5 +41,10 @@ written to `test-results/`; the HTML report is in `playwright-report/`.
 
 `src/simulation.ts` owns physics, `src/renderer.ts` maps physics state into the
 Three.js scene, and `src/main.ts` owns browser sizing and animation scheduling.
-Lucide icons are installed for the upcoming game controls. Dependencies,
+The game uses a seeded course and read-only `window.flight.state` snapshots for
+browser observation. Tests earn points using real keyboard and touch input;
+they cannot change physics or score through this interface. Lucide supplies
+the game control icons. Audio starts only after a player gesture and remains
+optional if the browser cannot initialize it. Mute applies to the current
+page session. The record key is `first-flight.best-score`. Dependencies,
 production assets, and generated test reports are ignored by Git.
