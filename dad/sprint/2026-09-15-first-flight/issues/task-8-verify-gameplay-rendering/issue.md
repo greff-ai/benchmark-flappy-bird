@@ -26,3 +26,7 @@ Reuse the actual game API and browser controls. Read-only test telemetry is acce
 - https://github.com/greff-ai/benchmark-flappy-bird/issues/1
 
 Related: #1
+
+## Benchmark maintenance
+
+As part of this verification task, refresh the nine installed dad skill directories from the locally validated source payload after recording benchmark-driven fixes. Preserve the installed OpenSpec workflows and all unrelated files. Verify the refreshed payload and rerun dad init, then include the update in this task's scoped commit and PR. This leaves the benchmark itself using the corrected skills instead of relying only on an external DAD_SKILL_DIR override.

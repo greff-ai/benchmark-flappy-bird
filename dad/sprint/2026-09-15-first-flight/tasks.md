@@ -24,18 +24,18 @@ updated: 2026-09-15
   halt: none
   warnings: nonblocking bundle/color warnings; initial parent upstream corrected
 
-- [ ] 2. 7 - Build the first-flight Flappy Bird game
+- [x] 2. 7 - Build the first-flight Flappy Bird game
   type: feature
   size: multi-branch
   branch: feat/7-first-flight-game
   dir: dad/sprint/2026-09-15-first-flight/issues/feat-7-first-flight-game
   depends on: 6
-  state: running
-  sub-step: none
-  pr: none
-  archived: none
+  state: done
+  sub-step: done
+  pr: 14 https://github.com/greff-ai/benchmark-flappy-bird/pull/14
+  archived: dad/sprint/2026-09-15-first-flight/issues/feat-7-first-flight-game/tasks.md
   halt: none
-  warnings: none
+  warnings: optional lint unset; bundle-size advisory; early issue10 installed-CLI usage
 
 - [ ] 3. 8 - Verify real-browser gameplay and rendering
   type: task
@@ -43,7 +43,7 @@ updated: 2026-09-15
   branch: task/8-verify-gameplay-rendering
   dir: dad/sprint/2026-09-15-first-flight/issues/task-8-verify-gameplay-rendering
   depends on: 7
-  state: pending
+  state: running
   sub-step: none
   pr: none
   archived: none
