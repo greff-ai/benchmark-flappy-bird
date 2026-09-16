@@ -8,7 +8,7 @@ The finished game already has comprehensive deterministic gameplay coverage, but
 - Add rendered framing checks at 320x568 portrait and 568x320 landscape, plus a separate real-clock browser smoke check using keyboard/touch input and actual canvas pixels.
 - Record tested viewports, commands, outcomes, and stable screenshot links in a concise verification report.
 - Refresh exactly the nine installed dad skill directories from the validated local source, verify their bytes, and rerun the installed CLI's 11 init checks while preserving unrelated skills.
-- Fix only narrow regressions demonstrated by verification; no game feature expansion is planned.
+- Fix the reproduced short-viewport crash overlay overlap so the fallen bird remains visible, without changing gameplay rules.
 
 ## Capabilities
 
@@ -22,4 +22,4 @@ None.
 
 ## Impact
 
-Changes are scoped to browser tests, curated verification documentation/screenshots, installed dad skill payloads, and this OpenSpec change. Existing game requirements, dependency choices, and full-suite merge checks remain applicable. Product source changes are conditional on a reproduced regression. Dad maintenance is a task-specific repository update, not a permanent game behavior requirement.
+Changes are scoped to browser tests, a narrow crash-overlay CSS repair, curated verification documentation/screenshots, installed dad skill payloads, and this OpenSpec change. Existing game requirements, dependency choices, and full-suite merge checks remain applicable. Dad maintenance is a task-specific repository update, not a permanent game behavior requirement.
