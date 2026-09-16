@@ -29,3 +29,33 @@ Two user-visible increments can each pass the full suite.
 - https://github.com/greff-ai/benchmark-flappy-bird/issues/1
 
 Related: #1
+
+Working branch: feat/7-first-flight-game
+
+## Added after planning - 2026-09-15
+
+| Issue | Title | Type | Size | Status |
+| --- | --- | --- | --- | --- |
+| needs issue | Fly through a Three.js obstacle course | feature | single-branch | ready |
+| needs issue | Polish controls, sound, and persistent records | feature | single-branch | ready |
+
+## Plan
+1. Fly through a Three.js obstacle course: Play a complete real-physics flight with once-per-gate scoring, collision game-over, and restart; none
+2. Polish controls, sound, and persistent records: Pause and resume, control sound, retain a personal best, and use accessible responsive controls; after Fly through a Three.js obstacle course
+
+## Sub-issues
+- #10 - Fly through a Three.js obstacle course
+- #11 - Polish controls, sound, and persistent records
+
+## Added after planning - 2026-09-15
+Resolved planned item "Fly through a Three.js obstacle course" to #10.
+Resolved planned item "Polish controls, sound, and persistent records" to #11.
+
+| Issue | Title | Type | Size | Status |
+| --- | --- | --- | --- | --- |
+| #10 | Fly through a Three.js obstacle course | feature | single-branch | ready |
+| #11 | Polish controls, sound, and persistent records | feature | single-branch | ready |
+
+## Plan
+1. #10: Play a complete real-physics flight with once-per-gate scoring, collision game-over, and restart; none
+2. #11: Pause and resume, control sound, retain a personal best, and use accessible responsive controls; after #10
