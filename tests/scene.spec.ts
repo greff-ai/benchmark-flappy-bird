@@ -1,76 +1,132 @@
-import { expect, test, type Locator } from '@playwright/test';
+import { expect, test, type Locator, type Page } from '@playwright/test';
 import { PNG } from 'pngjs';
+import { COURSE, type SimulationState } from '../src/simulation';
 
-async function inspectObject(canvas: Locator) {
+test.beforeEach(async ({ page }) => {
+  const time = new Date('2026-09-15T12:00:00Z');
+  await page.clock.install({ time });
+  await page.clock.pauseAt(time);
+});
+
+async function state(page: Page): Promise<SimulationState> {
+  return page.evaluate(() => window.flight.state);
+}
+async function pixels(canvas: Locator) {
   const image = PNG.sync.read(await canvas.screenshot());
-  let count = 0;
-  let minX = image.width;
-  let minY = image.height;
-  let maxX = 0;
-  let maxY = 0;
+  let bird = 0, pipes = 0, sumX = 0, sumY = 0;
+  let minX = image.width, minY = image.height, maxX = 0, maxY = 0;
   for (let y = 0; y < image.height; y++) {
     for (let x = 0; x < image.width; x++) {
       const offset = (y * image.width + x) * 4;
-      const [red, green, blue] = image.data.subarray(offset, offset + 3);
-      if (red > 120 && red > green * 1.25 && red > blue * 1.25) {
-        count++;
-        minX = Math.min(minX, x);
-        minY = Math.min(minY, y);
-        maxX = Math.max(maxX, x);
-        maxY = Math.max(maxY, y);
+      const [r, g, b] = image.data.subarray(offset, offset + 3);
+      if (r > 185 && g > 130 && b < 150 && r > g * 1.05) {
+        bird++; sumX += x; sumY += y;
+        minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+        minY = Math.min(minY, y); maxY = Math.max(maxY, y);
       }
+      if (g > r * 1.2 && g > b * 1.15 && y < image.height * 0.7) pipes++;
     }
   }
-  return { count, minX, minY, maxX, maxY, width: image.width, height: image.height };
+  return { bird, pipes, x: sumX / bird, y: sumY / bird, minX, maxX, minY, maxY,
+    width: image.width, height: image.height };
+}
+async function expectFraming(page: Page, canvas: Locator) {
+  await expect.poll(() => canvas.evaluate((element) => {
+    const c = element as HTMLCanvasElement;
+    const ratio = Math.min(devicePixelRatio, 2);
+    return c.width === Math.floor(innerWidth * ratio) && c.height === Math.floor(innerHeight * ratio)
+      && document.documentElement.scrollWidth === innerWidth
+      && document.documentElement.scrollHeight === innerHeight;
+  })).toBe(true);
+  const image = await pixels(canvas);
+  expect(image.bird).toBeGreaterThan(150);
+  expect(image.pipes).toBeGreaterThan(300);
+  expect(image.minX).toBeGreaterThan(0);
+  expect(image.maxX).toBeLessThan(image.width - 1);
+  expect(image.minY).toBeGreaterThan(0);
+  expect(image.maxY).toBeLessThan(image.height - 1);
+  const bounds = await page.getByRole('button', { name: /flight/i }).boundingBox();
+  if (bounds) {
+    const viewport = page.viewportSize()!;
+    expect(bounds.x).toBeGreaterThanOrEqual(0);
+    expect(bounds.x + bounds.width).toBeLessThanOrEqual(viewport.width);
+    expect(bounds.y + bounds.height).toBeLessThanOrEqual(viewport.height);
+  }
 }
 
-function expectFramedObject(object: Awaited<ReturnType<typeof inspectObject>>) {
-  expect(object.count).toBeGreaterThan(object.width * object.height * 0.002);
-  expect(object.minX).toBeGreaterThan(0);
-  expect(object.minY).toBeGreaterThan(0);
-  expect(object.maxX).toBeLessThan(object.width - 1);
-  expect(object.maxY).toBeLessThan(object.height - 1);
-  const aspect = (object.maxX - object.minX) / (object.maxY - object.minY);
-  expect(aspect).toBeGreaterThan(0.8);
-  expect(aspect).toBeLessThan(1.2);
-}
-
-test('renders moving, correctly framed physics at the viewport size and after resize', async ({ page }, testInfo) => {
+test('real input clears two gates, crashes, restarts, and renders at responsive sizes', async ({ page, isMobile }, testInfo) => {
+  test.setTimeout(90000);
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
-  page.on('console', (message) => {
-    if (message.type() === 'error') errors.push(message.text());
-  });
+  page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()); });
   await page.goto('/');
-  const scene = page.getByLabel('Animated three-dimensional pendulum');
-  await expect(scene).toBeVisible();
-
-  async function expectCanvasSize() {
-    await expect.poll(() => scene.evaluate((element) => {
-      const canvas = element as HTMLCanvasElement;
-      const bounds = canvas.getBoundingClientRect();
-      const ratio = Math.min(window.devicePixelRatio, 2);
-      return bounds.width === innerWidth && bounds.height === innerHeight
-        && canvas.width === Math.floor(innerWidth * ratio)
-        && canvas.height === Math.floor(innerHeight * ratio)
-        && document.documentElement.scrollWidth === innerWidth
-        && document.documentElement.scrollHeight === innerHeight;
-    })).toBe(true);
+  await page.clock.runFor(32);
+  const canvas = page.getByLabel('First Flight obstacle course');
+  await expect(page.getByRole('button', { name: 'Start flight' })).toBeVisible();
+  await expectFraming(page, canvas);
+  await page.screenshot({ path: testInfo.outputPath('ready.png') });
+  const initial = await state(page);
+  expect(initial.phase).toBe('ready');
+  const before = await pixels(canvas);
+  async function flap() {
+    if (isMobile) await page.touchscreen.tap(55, 250);
+    else await page.keyboard.press('Space');
   }
-
-  await expectCanvasSize();
-  await expect.poll(async () => (await inspectObject(scene)).count).toBeGreaterThan(100);
-  const first = await inspectObject(scene);
-  expectFramedObject(first);
-  await expect.poll(async () => {
-    const next = await inspectObject(scene);
-    return Math.hypot(next.minX - first.minX, next.minY - first.minY);
-  }, { timeout: 5000 }).toBeGreaterThan(8);
-  await scene.screenshot({ path: testInfo.outputPath('scene.png') });
-
+  await flap();
+  await expect.poll(async () => (await state(page)).phase).toBe('running');
+  await page.clock.runFor(160);
+  const after = await pixels(canvas);
+  expect(Math.hypot(after.x - before.x, after.y - before.y)).toBeGreaterThan(5);
+  for (let attempt = 0; attempt < 150 && (await state(page)).score < 2; attempt++) {
+    const current = await state(page);
+    expect(current.phase).toBe('running');
+    const next = current.gates.find((gate) => gate.x + COURSE.gateWidth / 2 >= current.bird.x - COURSE.radius)!;
+    if (current.bird.y > next.center + 15 && current.bird.velocity >= 0) await flap();
+    await page.clock.runFor(50);
+  }
+  expect((await state(page)).score).toBe(2);
+  await expect(page.getByLabel('Score', { exact: true })).toHaveText('02');
+  await page.screenshot({ path: testInfo.outputPath('running.png') });
+  await page.clock.runFor(1500);
+  await expect.poll(async () => (await state(page)).phase, { timeout: 5000 }).toBe('crashed');
+  const crashed = await state(page);
+  await page.clock.runFor(150);
+  expect(await state(page)).toEqual(crashed);
+  await page.screenshot({ path: testInfo.outputPath('crashed.png') });
+  const restart = page.getByRole('button', { name: 'Restart flight' });
+  if (isMobile) await restart.tap({ force: true }); else { await restart.focus(); await page.keyboard.press('Enter'); }
+  await page.clock.runFor(32);
+  await expect.poll(async () => (await state(page)).phase).toBe('running');
+  const fresh = await state(page);
+  expect(fresh.score).toBe(0);
+  expect(fresh.tick).toBeLessThan(15);
+  expect(fresh.gates[0].center).toBe(initial.gates[0].center);
+  expect(fresh.bird.velocity).toBeLessThan(0);
+  await page.reload();
   await page.setViewportSize({ width: 900, height: 500 });
-  await expectCanvasSize();
-  expectFramedObject(await inspectObject(scene));
-  await scene.screenshot({ path: testInfo.outputPath('resized-scene.png') });
+  await page.clock.runFor(32);
+  await expectFraming(page, canvas);
+  await page.screenshot({ path: testInfo.outputPath('landscape.png') });
   expect(errors).toEqual([]);
+});
+
+test('ready control starts one flap and held keyboard repeats do not add flaps', async ({ page, isMobile }) => {
+  await page.goto('/');
+  await page.clock.runFor(32);
+  const start = page.getByRole('button', { name: 'Start flight' });
+  if (isMobile) await start.tap({ force: true }); else await start.click({ force: true });
+  await page.clock.runFor(32);
+  await expect.poll(async () => (await state(page)).phase).toBe('running');
+  if (!isMobile) {
+    await page.keyboard.down('Space');
+    for (let i = 0; i < 9; i++) {
+      await page.clock.runFor(50);
+      await page.keyboard.down('Space');
+    }
+    expect((await state(page)).bird.velocity).toBeGreaterThan(0);
+    await page.keyboard.up('Space');
+  } else {
+    await page.clock.runFor(450);
+    expect((await state(page)).bird.velocity).toBeGreaterThan(0);
+  }
 });
