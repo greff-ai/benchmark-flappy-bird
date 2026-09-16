@@ -16,3 +16,5 @@ Validation: typecheck, 26 unit tests, 10 desktop/mobile browser tests, productio
 `polished-flight-controls`
 
 Issue directory: `dad/sprint/2026-09-15-first-flight/issues/feat-7-first-flight-game/issues/feat-11-polished-flight-controls`
+
+PR: 13 https://github.com/greff-ai/benchmark-flappy-bird/pull/13
