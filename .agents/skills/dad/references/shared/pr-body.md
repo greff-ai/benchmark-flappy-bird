@@ -4,6 +4,12 @@ Every PR uses `dad pr open` with its own issue key; the CLI emits the tracker
 linking form. Use title-file and body-file in `references/shared/cli.md`.
 Never interpolate titles or prose into shell code.
 
+Links published to tracker/PR bodies use the forge's absolute blob/tree URLs
+pinned to a published commit containing the target. Relative paths do not
+resolve as repository links there; child branch names may be deleted. Keep
+directory identifiers repo-relative. Use the same absolute links in local
+mirrors. For merged children, pin links to their reachable merge commit.
+
 ## Leaf
 
 Write to `{ISSUE_DIR}/pr.md`:
@@ -13,7 +19,7 @@ Write to `{ISSUE_DIR}/pr.md`:
 - `## Openspec change`: change name, without links to movable active artifacts.
 - `Issue directory:` with the permanent repo-relative directory.
 
-At merge, append `## Archived openspec change` with permanent repo paths to
+At merge, append `## Archived openspec change` with commit-pinned links to
 proposal.md, design.md, and tasks.md. A failed merge appends `## Merge issues`
 with the failure and attempted repairs. Preserve these sections on retries.
 

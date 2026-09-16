@@ -1,6 +1,6 @@
 ## Context
 
-See proposal.md. Installed dad still requests repo-relative archive paths and a combined archive/link commit. Corrected source requires published commit-pinned forge URLs and two publication steps. The benchmark's product specs cover gameplay and application verification, so this documentation change declares `skip_specs: true`; no spec delta or spec sync is needed.
+See proposal.md. At planning, installed dad requested repo-relative archive paths and a combined archive/link commit. The refreshed source requires published commit-pinned forge URLs and two publication steps. The benchmark's product specs cover gameplay and application verification, so this documentation change declares `skip_specs: true`; no spec delta or spec sync is needed.
 
 ## Goals / Non-Goals
 
@@ -14,6 +14,7 @@ See proposal.md. Installed dad still requests repo-relative archive paths and a 
 2. Use a one-off temporary script with structured `gh api` requests and Playwright's DOM parser. Read PR #15's rendered HTML to demonstrate the relative href, then render absolute candidate Markdown and validate parsed hrefs and authenticated file contents for proposal/design/tasks at published commit `6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03`, under `openspec/changes/archive/2026-09-16-verify-gameplay-rendering/`. This validates the procedure without requiring this unfinished change's archive. Retain the script and detailed API evidence in `/private/tmp/durable-archive-links-evidence/`, and commit a concise report beside issue #16.
 3. After implementation tasks and merge gates pass, the coordinator archives this docs-only change without a spec sync, commits and pushes the archive, and reads that full published commit ID. Form `https://github.com/greff-ai/benchmark-flappy-bird/blob/<full-commit>/<archive-path>/<artifact>.md` URLs. Append identical links once to the local issue mirror, local PR mirror, remote issue body, and remote PR body; commit/push the local mirrors separately. Before merge, compare all four surfaces, parse rendered remote hrefs, and read all three targets at the pinned commit. On retry, reuse valid published links.
 4. After merge and child-branch deletion, the coordinator repeats authenticated target reads and rendered-href checks, then appends final observations to issue evidence during merge bookkeeping. These are workflow gates, not implementation task prerequisites. The final sprint PR links merged children through reachable merge commits. Relative URLs and child-branch URLs are unsuitable because their resolution or lifetime differs.
+5. Apply runs strict OpenSpec validation and checks the diff remains documentation-only. The coordinator then runs the required separate unit checkpoint, independent verification, and full merge suite including production build. This preserves all gates while avoiding a redundant full-suite run during the docs-only apply phase.
 
 ## Risks / Trade-offs
 

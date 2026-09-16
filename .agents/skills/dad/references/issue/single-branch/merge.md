@@ -31,10 +31,12 @@ MAIN_BRANCH. Require a clean tree; preserve merge and archive evidence on retry.
    `references/shared/openspec-flow.md`. An already archived change must
    have exactly one matching archive and no active directory. Do not archive
    through incomplete-task or sync warnings.
-7. Append permanent proposal/design/tasks links once to ISSUE_DIR/pr.md,
-   ISSUE_DIR/issue.md, the PR body, and issue body. Read both remote bodies to
-   avoid duplicating history. Commit and push the archive and local links
-   before merging. Archive checkpoint complete only after all four agree.
+7. Commit/push the archive first; use that full commit ID to form absolute
+   proposal/design/tasks URLs as specified in `references/shared/pr-body.md`.
+   Append them once to ISSUE_DIR/pr.md, ISSUE_DIR/issue.md, the PR body, and
+   issue body. Read both remote bodies to avoid duplicating history. Commit
+   and push local links before merging. Archive checkpoint complete only
+   after all four agree; on retry reuse valid published links already present.
 8. Re-read the PR; require the same head/base. Squash with `dad pr merge`.
    Honor branch protection failures verbatim. If it already merged, recover
    bookkeeping. Otherwise retain its merge commit and mark checkpoint merge.
