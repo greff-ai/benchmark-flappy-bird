@@ -1,0 +1,656 @@
+[
+  {
+    "project": "desktop",
+    "name": "native-motion.json",
+    "data": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "input": "keyboard",
+      "before": {
+        "bird": 1020,
+        "pipes": 52230,
+        "x": 523.771568627451,
+        "y": 436.39019607843136,
+        "minX": 492,
+        "maxX": 569,
+        "minY": 404,
+        "maxY": 453,
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "bird": 1226,
+        "pipes": 79799,
+        "x": 526.3613376835236,
+        "y": 781.6557911908646,
+        "minX": 505,
+        "maxX": 557,
+        "minY": 756,
+        "maxY": 804,
+        "width": 1440,
+        "height": 900
+      },
+      "displacement": 345.2753076489926,
+      "falling": {
+        "phase": "running",
+        "tick": 27,
+        "score": 0,
+        "crash": null,
+        "bird": {
+          "x": 140,
+          "y": 308.2999999999994,
+          "velocity": 1.1499999999999773,
+          "angle": 0.09199999999999818
+        },
+        "gates": [
+          {
+            "id": 0,
+            "x": 400.6000000000003,
+            "center": 347.7579692262225,
+            "scored": false
+          },
+          {
+            "id": 1,
+            "x": 710.5999999999988,
+            "center": 329.69375499524176,
+            "scored": false
+          },
+          {
+            "id": 2,
+            "x": 1020.5999999999988,
+            "center": 383.50093180546537,
+            "scored": false
+          },
+          {
+            "id": 3,
+            "x": 1330.5999999999988,
+            "center": 344.4809692585841,
+            "scored": false
+          },
+          {
+            "id": 4,
+            "x": 1640.5999999999988,
+            "center": 361.32262168219313,
+            "scored": false
+          }
+        ]
+      },
+      "flapped": {
+        "phase": "running",
+        "tick": 57,
+        "score": 0,
+        "crash": null,
+        "bird": {
+          "x": 140,
+          "y": 324.0499999999987,
+          "velocity": -2.6000000000000227,
+          "angle": -0.20800000000000182
+        },
+        "gates": [
+          {
+            "id": 0,
+            "x": 334.60000000000065,
+            "center": 347.7579692262225,
+            "scored": false
+          },
+          {
+            "id": 1,
+            "x": 644.5999999999974,
+            "center": 329.69375499524176,
+            "scored": false
+          },
+          {
+            "id": 2,
+            "x": 954.5999999999974,
+            "center": 383.50093180546537,
+            "scored": false
+          },
+          {
+            "id": 3,
+            "x": 1264.5999999999974,
+            "center": 344.4809692585841,
+            "scored": false
+          },
+          {
+            "id": 4,
+            "x": 1574.5999999999974,
+            "center": 361.32262168219313,
+            "scored": false
+          }
+        ]
+      },
+      "captured": {
+        "phase": "crashed",
+        "tick": 120,
+        "score": 0,
+        "crash": "pipe",
+        "bird": {
+          "x": 139.28400071600137,
+          "y": 664.2499999999973,
+          "velocity": 13.149999999999977,
+          "angle": 0.9
+        },
+        "gates": [
+          {
+            "id": 0,
+            "x": 196.00000000000136,
+            "center": 347.7579692262225,
+            "scored": false
+          },
+          {
+            "id": 1,
+            "x": 505.9999999999947,
+            "center": 329.69375499524176,
+            "scored": false
+          },
+          {
+            "id": 2,
+            "x": 815.9999999999945,
+            "center": 383.50093180546537,
+            "scored": false
+          },
+          {
+            "id": 3,
+            "x": 1125.9999999999945,
+            "center": 344.4809692585841,
+            "scored": false
+          },
+          {
+            "id": 4,
+            "x": 1435.9999999999945,
+            "center": 361.32262168219313,
+            "scored": false
+          }
+        ]
+      },
+      "errors": []
+    }
+  },
+  {
+    "project": "mobile",
+    "name": "native-motion.json",
+    "data": {
+      "viewport": {
+        "width": 412,
+        "height": 839
+      },
+      "input": "touch",
+      "before": {
+        "bird": 3674,
+        "pipes": 125449,
+        "x": 168.14099074578115,
+        "y": 1057.5552531301034,
+        "minX": 106,
+        "maxX": 259,
+        "minY": 996,
+        "maxY": 1089,
+        "width": 1082,
+        "height": 2202
+      },
+      "after": {
+        "bird": 4486,
+        "pipes": 277670,
+        "x": 172.77307177886757,
+        "y": 1686.6357556843514,
+        "minX": 132,
+        "maxX": 231,
+        "minY": 1637,
+        "maxY": 1736,
+        "width": 1082,
+        "height": 2202
+      },
+      "displacement": 629.0975559232464,
+      "falling": {
+        "phase": "running",
+        "tick": 26,
+        "score": 0,
+        "crash": null,
+        "bird": {
+          "x": 140,
+          "y": 307.1499999999994,
+          "velocity": 0.8999999999999773,
+          "angle": 0.07199999999999818
+        },
+        "gates": [
+          {
+            "id": 0,
+            "x": 402.8000000000003,
+            "center": 347.7579692262225,
+            "scored": false
+          },
+          {
+            "id": 1,
+            "x": 712.7999999999988,
+            "center": 329.69375499524176,
+            "scored": false
+          },
+          {
+            "id": 2,
+            "x": 1022.7999999999988,
+            "center": 383.50093180546537,
+            "scored": false
+          },
+          {
+            "id": 3,
+            "x": 1332.7999999999988,
+            "center": 344.4809692585841,
+            "scored": false
+          },
+          {
+            "id": 4,
+            "x": 1642.7999999999988,
+            "center": 361.32262168219313,
+            "scored": false
+          }
+        ]
+      },
+      "flapped": {
+        "phase": "running",
+        "tick": 54,
+        "score": 0,
+        "crash": null,
+        "bird": {
+          "x": 140,
+          "y": 361.8499999999988,
+          "velocity": -4.100000000000023,
+          "angle": -0.32800000000000185
+        },
+        "gates": [
+          {
+            "id": 0,
+            "x": 341.2000000000006,
+            "center": 347.7579692262225,
+            "scored": false
+          },
+          {
+            "id": 1,
+            "x": 651.1999999999975,
+            "center": 329.69375499524176,
+            "scored": false
+          },
+          {
+            "id": 2,
+            "x": 961.1999999999975,
+            "center": 383.50093180546537,
+            "scored": false
+          },
+          {
+            "id": 3,
+            "x": 1271.1999999999975,
+            "center": 344.4809692585841,
+            "scored": false
+          },
+          {
+            "id": 4,
+            "x": 1581.1999999999975,
+            "center": 361.32262168219313,
+            "scored": false
+          }
+        ]
+      },
+      "captured": {
+        "phase": "crashed",
+        "tick": 120,
+        "score": 0,
+        "crash": "pipe",
+        "bird": {
+          "x": 139.28400071600137,
+          "y": 643.9999999999973,
+          "velocity": 12.399999999999977,
+          "angle": 0.9
+        },
+        "gates": [
+          {
+            "id": 0,
+            "x": 196.00000000000136,
+            "center": 347.7579692262225,
+            "scored": false
+          },
+          {
+            "id": 1,
+            "x": 505.9999999999947,
+            "center": 329.69375499524176,
+            "scored": false
+          },
+          {
+            "id": 2,
+            "x": 815.9999999999945,
+            "center": 383.50093180546537,
+            "scored": false
+          },
+          {
+            "id": 3,
+            "x": 1125.9999999999945,
+            "center": 344.4809692585841,
+            "scored": false
+          },
+          {
+            "id": 4,
+            "x": 1435.9999999999945,
+            "center": 361.32262168219313,
+            "scored": false
+          }
+        ]
+      },
+      "errors": []
+    }
+  },
+  {
+    "project": "desktop",
+    "name": "compact-framing.json",
+    "data": [
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "phase": "ready",
+        "pixels": {
+          "bird": 313,
+          "pipes": 6637,
+          "x": 49.533546325878596,
+          "y": 272.5047923322684,
+          "minX": 32,
+          "maxX": 75,
+          "minY": 255,
+          "maxY": 282,
+          "width": 320,
+          "height": 568
+        }
+      },
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "phase": "running",
+        "pixels": {
+          "bird": 332,
+          "pipes": 6997,
+          "x": 49.274096385542165,
+          "y": 247.18072289156626,
+          "minX": 32,
+          "maxX": 66,
+          "minY": 230,
+          "maxY": 256,
+          "width": 320,
+          "height": 568
+        }
+      },
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "phase": "paused",
+        "pixels": {
+          "bird": 332,
+          "pipes": 6991,
+          "x": 49.274096385542165,
+          "y": 247.18072289156626,
+          "minX": 32,
+          "maxX": 66,
+          "minY": 230,
+          "maxY": 256,
+          "width": 320,
+          "height": 568
+        }
+      },
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "phase": "crashed",
+        "pixels": {
+          "bird": 321,
+          "pipes": 10802,
+          "x": 49.9190031152648,
+          "y": 483.7943925233645,
+          "minX": 32,
+          "maxX": 76,
+          "minY": 466,
+          "maxY": 493,
+          "width": 320,
+          "height": 568
+        }
+      },
+      {
+        "viewport": {
+          "width": 568,
+          "height": 320
+        },
+        "phase": "ready",
+        "pixels": {
+          "bird": 126,
+          "pipes": 5807,
+          "x": 214.1031746031746,
+          "y": 154.03968253968253,
+          "minX": 204,
+          "maxX": 225,
+          "minY": 143,
+          "maxY": 160,
+          "width": 568,
+          "height": 320
+        }
+      },
+      {
+        "viewport": {
+          "width": 568,
+          "height": 320
+        },
+        "phase": "running",
+        "pixels": {
+          "bird": 132,
+          "pipes": 5789,
+          "x": 213.84848484848484,
+          "y": 136.63636363636363,
+          "minX": 204,
+          "maxX": 224,
+          "minY": 126,
+          "maxY": 142,
+          "width": 568,
+          "height": 320
+        }
+      },
+      {
+        "viewport": {
+          "width": 568,
+          "height": 320
+        },
+        "phase": "paused",
+        "pixels": {
+          "bird": 132,
+          "pipes": 5789,
+          "x": 213.84848484848484,
+          "y": 136.63636363636363,
+          "minX": 204,
+          "maxX": 224,
+          "minY": 126,
+          "maxY": 142,
+          "width": 568,
+          "height": 320
+        }
+      },
+      {
+        "viewport": {
+          "width": 568,
+          "height": 320
+        },
+        "phase": "crashed",
+        "pixels": {
+          "bird": 125,
+          "pipes": 8718,
+          "x": 214.624,
+          "y": 285.864,
+          "minX": 204,
+          "maxX": 229,
+          "minY": 275,
+          "maxY": 291,
+          "width": 568,
+          "height": 320
+        }
+      }
+    ]
+  },
+  {
+    "project": "mobile",
+    "name": "compact-framing.json",
+    "data": [
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "phase": "ready",
+        "pixels": {
+          "bird": 2215,
+          "pipes": 45559,
+          "x": 130.7900677200903,
+          "y": 715.7291196388262,
+          "minX": 82,
+          "maxX": 201,
+          "minY": 669,
+          "maxY": 741,
+          "width": 840,
+          "height": 1491
+        }
+      },
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "phase": "running",
+        "pixels": {
+          "bird": 2348,
+          "pipes": 47337,
+          "x": 129.91311754684838,
+          "y": 649.3164395229983,
+          "minX": 85,
+          "maxX": 200,
+          "minY": 603,
+          "maxY": 673,
+          "width": 840,
+          "height": 1491
+        }
+      },
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "phase": "paused",
+        "pixels": {
+          "bird": 2348,
+          "pipes": 47250,
+          "x": 129.91311754684838,
+          "y": 649.3164395229983,
+          "minX": 85,
+          "maxX": 200,
+          "minY": 603,
+          "maxY": 673,
+          "width": 840,
+          "height": 1491
+        }
+      },
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "phase": "crashed",
+        "pixels": {
+          "bird": 2246,
+          "pipes": 74021,
+          "x": 130.83971504897596,
+          "y": 1270.1567230632236,
+          "minX": 82,
+          "maxX": 200,
+          "minY": 1223,
+          "maxY": 1295,
+          "width": 840,
+          "height": 1491
+        }
+      },
+      {
+        "viewport": {
+          "width": 568,
+          "height": 320
+        },
+        "phase": "ready",
+        "pixels": {
+          "bird": 867,
+          "pipes": 39684,
+          "x": 562.7301038062284,
+          "y": 405.2618223760092,
+          "minX": 533,
+          "maxX": 607,
+          "minY": 376,
+          "maxY": 420,
+          "width": 1491,
+          "height": 840
+        }
+      },
+      {
+        "viewport": {
+          "width": 568,
+          "height": 320
+        },
+        "phase": "running",
+        "pixels": {
+          "bird": 914,
+          "pipes": 39407,
+          "x": 562.4409190371991,
+          "y": 359.171772428884,
+          "minX": 534,
+          "maxX": 606,
+          "minY": 331,
+          "maxY": 374,
+          "width": 1491,
+          "height": 840
+        }
+      },
+      {
+        "viewport": {
+          "width": 568,
+          "height": 320
+        },
+        "phase": "paused",
+        "pixels": {
+          "bird": 914,
+          "pipes": 39407,
+          "x": 562.4409190371991,
+          "y": 359.171772428884,
+          "minX": 534,
+          "maxX": 606,
+          "minY": 331,
+          "maxY": 374,
+          "width": 1491,
+          "height": 840
+        }
+      },
+      {
+        "viewport": {
+          "width": 568,
+          "height": 320
+        },
+        "phase": "crashed",
+        "pixels": {
+          "bird": 870,
+          "pipes": 59896,
+          "x": 563.2436781609196,
+          "y": 751.3137931034482,
+          "minX": 534,
+          "maxX": 606,
+          "minY": 722,
+          "maxY": 766,
+          "width": 1491,
+          "height": 840
+        }
+      }
+    ]
+  }
+]

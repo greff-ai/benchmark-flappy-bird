@@ -21,7 +21,8 @@
 
 Setup belongs to `dad init`; a flow never installs tools, repairs credentials,
 or rewrites settings to bypass an error. Missing configuration or tracker IDs
-should point the user to setup.
+should point the user to `references/shared/setup.md` for an explicit setup
+request, not silently run it as recovery.
 
 ## Errors
 

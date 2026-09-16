@@ -1,0 +1,39 @@
+{
+  "source": "/Users/greff/Projects/greff-ai/dad/skills",
+  "directories": [
+    "dad",
+    "dad-bug",
+    "dad-feature",
+    "dad-issue",
+    "dad-sprint",
+    "dad-sprint-plan",
+    "dad-sprint-pr",
+    "dad-sprint-update",
+    "dad-task"
+  ],
+  "matchingFiles": 39,
+  "exactBytes": true,
+  "changed": [
+    "dad/references/issue/single-branch/merge.md",
+    "dad/references/shared/pr-body.md"
+  ],
+  "unchangedUnrelatedFiles": 7,
+  "unrelatedBefore": {
+    ".openspec-target": "38700dfad5711976e2f7aeab31013f04aed8c83118a1ef892f6d23bdfe944602",
+    "openspec-apply-change/SKILL.md": "0a948dcdbded11b9e7b2101cc16fca2f5da9c83dfa62ec6593743993d8c9398c",
+    "openspec-archive-change/SKILL.md": "c9fefae73635876634432270b57ffdcdd24d0f8aa727d12f1a03c81603d8204c",
+    "openspec-explore/SKILL.md": "c46c348c91cba294474e8ea9121976ccd38a476a435284e12d4017c22d425b0c",
+    "openspec-propose/SKILL.md": "16aca75376b079b26764e845625555f9db0f15a1b8aee2dbc1fb2d8951cd4ef7",
+    "openspec-sync-specs/SKILL.md": "b2ab0a3e06c41ea32e2e8fba9c37320f65c993d17bdc9a9ac344b75c38c41a6f",
+    "openspec-verify-change/SKILL.md": "6664695b9cd1735b352b42ffd610bef6795fecd51b2b7a75b933f7ea438438c6"
+  },
+  "unrelatedAfter": {
+    ".openspec-target": "38700dfad5711976e2f7aeab31013f04aed8c83118a1ef892f6d23bdfe944602",
+    "openspec-apply-change/SKILL.md": "0a948dcdbded11b9e7b2101cc16fca2f5da9c83dfa62ec6593743993d8c9398c",
+    "openspec-archive-change/SKILL.md": "c9fefae73635876634432270b57ffdcdd24d0f8aa727d12f1a03c81603d8204c",
+    "openspec-explore/SKILL.md": "c46c348c91cba294474e8ea9121976ccd38a476a435284e12d4017c22d425b0c",
+    "openspec-propose/SKILL.md": "16aca75376b079b26764e845625555f9db0f15a1b8aee2dbc1fb2d8951cd4ef7",
+    "openspec-sync-specs/SKILL.md": "b2ab0a3e06c41ea32e2e8fba9c37320f65c993d17bdc9a9ac344b75c38c41a6f",
+    "openspec-verify-change/SKILL.md": "6664695b9cd1735b352b42ffd610bef6795fecd51b2b7a75b933f7ea438438c6"
+  }
+}

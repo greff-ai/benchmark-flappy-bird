@@ -1,0 +1,108 @@
+{
+  "mode": "preflight",
+  "stage": "preflight",
+  "testedAt": "2026-09-16T05:25:36.372Z",
+  "repository": "greff-ai/benchmark-flappy-bird",
+  "sha": "6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+  "archive": "openspec/changes/archive/2026-09-16-verify-gameplay-rendering",
+  "expected": [
+    "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md",
+    "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md",
+    "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md"
+  ],
+  "requests": [
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/commits/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/pulls/15",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "markdown",
+      "method": "POST",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/contents/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md?ref=6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/contents/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md?ref=6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    },
+    {
+      "endpoint": "repos/greff-ai/benchmark-flappy-bird/contents/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md?ref=6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+      "method": "GET",
+      "status": 200,
+      "exitCode": 0
+    }
+  ],
+  "surfaces": [
+    {
+      "name": "candidate",
+      "hrefs": [
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md",
+        "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "path": "openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md",
+      "url": "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md",
+      "commit": "6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+      "httpStatus": 200,
+      "blobSha": "024ee02750915091ee8de3a750f3325e62bb963f",
+      "sha256": "9d0ed43c68c2bce8a9a4e0ce5377c1d982eab58338d46f0e455cf27feb50699e",
+      "bytes": 1623,
+      "localGitContentEqual": true
+    },
+    {
+      "path": "openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md",
+      "url": "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md",
+      "commit": "6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+      "httpStatus": 200,
+      "blobSha": "a63f86c44de45639468e57c43f042560d023d4f0",
+      "sha256": "6f0c60a81a481c3f6ba0decccac7980721c18a7553a383b27514a995a734a11b",
+      "bytes": 4785,
+      "localGitContentEqual": true
+    },
+    {
+      "path": "openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md",
+      "url": "https://github.com/greff-ai/benchmark-flappy-bird/blob/6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md",
+      "commit": "6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+      "httpStatus": 200,
+      "blobSha": "053d38749ab41fb20f52021778889903bb7d1e51",
+      "sha256": "e2cfef932df93deb2b6954dc4aef7f80c42ab303c68463d349d9f6769887c50f",
+      "bytes": 1850,
+      "localGitContentEqual": true
+    }
+  ],
+  "outcome": "pass",
+  "publishedCommit": "6adba1db1bde4d1ae710d0b1ce97c8bfdccadd03",
+  "legacy": {
+    "pr": 15,
+    "relativeHrefs": [
+      "openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md",
+      "openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md",
+      "openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md"
+    ],
+    "resolvedUrls": [
+      "https://github.com/greff-ai/benchmark-flappy-bird/pull/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/proposal.md",
+      "https://github.com/greff-ai/benchmark-flappy-bird/pull/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/design.md",
+      "https://github.com/greff-ai/benchmark-flappy-bird/pull/openspec/changes/archive/2026-09-16-verify-gameplay-rendering/tasks.md"
+    ]
+  }
+}
