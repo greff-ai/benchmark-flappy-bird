@@ -15,3 +15,5 @@ Validation: typecheck, 26 unit tests, strict OpenSpec validation, and live candi
 durable-archive-links (documentation only; no specification sync needed)
 
 Issue directory: `dad/sprint/2026-09-15-first-flight/issues/bug-16-durable-archive-links`
+
+PR: 17 https://github.com/greff-ai/benchmark-flappy-bird/pull/17
