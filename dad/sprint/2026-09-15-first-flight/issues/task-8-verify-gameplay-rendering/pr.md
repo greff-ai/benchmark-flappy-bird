@@ -16,3 +16,5 @@ Validation: 26 unit tests, 14 browser cases, typecheck, build, and strict OpenSp
 verify-gameplay-rendering
 
 Issue directory: `dad/sprint/2026-09-15-first-flight/issues/task-8-verify-gameplay-rendering`
+
+PR: 15 https://github.com/greff-ai/benchmark-flappy-bird/pull/15
