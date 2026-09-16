@@ -37,3 +37,5 @@ None. The application remains a minimal rendered physics foundation; gameplay be
 - [Proposal](openspec/changes/archive/2026-09-15-tested-game-tooling/proposal.md)
 - [Design](openspec/changes/archive/2026-09-15-tested-game-tooling/design.md)
 - [Tasks](openspec/changes/archive/2026-09-15-tested-game-tooling/tasks.md)
+
+Merged in PR https://github.com/greff-ai/benchmark-flappy-bird/pull/9
