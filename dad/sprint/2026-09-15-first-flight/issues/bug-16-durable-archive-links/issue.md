@@ -49,3 +49,7 @@ Typecheck, 26 unit tests, 14 browser cases, production build, and strict OpenSpe
 - [Proposal](https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/proposal.md)
 - [Design](https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/design.md)
 - [Tasks](https://github.com/greff-ai/benchmark-flappy-bird/blob/22662b04e23ac1d2284fe8b35b175c06f18f5951/openspec/changes/archive/2026-09-16-durable-archive-links/tasks.md)
+
+Merged in PR https://github.com/greff-ai/benchmark-flappy-bird/pull/17
+
+Post-deletion verification passed: all four rendered surfaces retain the same three absolute links pinned to `22662b04e23ac1d2284fe8b35b175c06f18f5951`; all three authenticated file reads returned HTTP 200 with matching contents after the remote child branch was deleted. Final observations are retained in this issue's evidence directory.

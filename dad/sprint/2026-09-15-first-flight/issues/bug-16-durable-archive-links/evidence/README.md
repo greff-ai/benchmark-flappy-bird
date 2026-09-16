@@ -41,4 +41,4 @@ Before merge: all four GitHub-rendered surfaces contained exactly the same three
 
 Unit and merge gates passed: typecheck, 26 unit tests, 14 browser cases, production build, and strict OpenSpec (4/4 before archive; 3/3 afterward). Logs: `/private/tmp/first-flight-suite-FAxZel/unit.log` and `/private/tmp/first-flight-suite-TGwino/{full,openspec-strict}.log`. Independent verification found no issues. Lint is unconfigured; the existing bundle-size advisory remains.
 
-Post-deletion verification: pending the authorized merge and child-branch deletion.
+Post-deletion verification passed after PR #17 merged as `26b1ff5f5d5243679eec8ca766e306c5991077e8` and the remote child branch was deleted. All four rendered surfaces still contain exactly the same three pinned hrefs; all three authenticated contents reads still return HTTP 200 with matching API/local Git blob bytes. [Post-deletion observations](post-delete.json) retain the merged PR status, absent remote head, rendered HTML, hrefs, and target hashes. The archive URLs remain pinned to `22662b04e23ac1d2284fe8b35b175c06f18f5951` throughout both checks.
