@@ -11,18 +11,18 @@ updated: 2026-09-15
 
 ## Rows
 
-- [ ] 1. 10 - Fly through a Three.js obstacle course
+- [x] 1. 10 - Fly through a Three.js obstacle course
   type: feature
   size: single-branch
   branch: feat/10-threejs-obstacle-course
   dir: dad/sprint/2026-09-15-first-flight/issues/feat-7-first-flight-game/issues/feat-10-threejs-obstacle-course
   depends on: none
-  state: running
-  sub-step: none
-  pr: none
-  archived: none
+  state: done
+  sub-step: done
+  pr: 12 https://github.com/greff-ai/benchmark-flappy-bird/pull/12
+  archived: openspec/changes/archive/2026-09-15-threejs-obstacle-course
   halt: none
-  warnings: none
+  warnings: Optional lint unset; Vite bundle-size advisory; early tracker reads used installed equivalent CLI before correction to supplied payload.
 
 - [ ] 2. 11 - Polish controls, sound, and persistent records
   type: feature
@@ -30,7 +30,7 @@ updated: 2026-09-15
   branch: feat/11-polished-flight-controls
   dir: dad/sprint/2026-09-15-first-flight/issues/feat-7-first-flight-game/issues/feat-11-polished-flight-controls
   depends on: 10
-  state: pending
+  state: running
   sub-step: none
   pr: none
   archived: none
