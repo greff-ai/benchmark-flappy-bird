@@ -9,13 +9,21 @@
 * { box-sizing: border-box; }
 html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; }
 canvas { display: block; width: 100%; height: 100%; touch-action: none; outline: none; }
-.hud { position: absolute; inset: max(26px, env(safe-area-inset-top)) 32px auto; pointer-events: none; display: flex; align-items: flex-start; justify-content: space-between; }
-.brand { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 850; }
+.hud { position: absolute; inset: max(26px, env(safe-area-inset-top)) 32px auto; pointer-events: none; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 850; white-space: nowrap; }
 #brand-icon { display: grid; place-items: center; }
 #brand-icon svg { width: 24px; height: 24px; stroke-width: 2; }
-.score { display: grid; justify-items: center; width: 84px; height: 84px; padding: 8px 4px; border-radius: 8px; background: #e6f9edeb; }
+.scoreboard { display: flex; gap: 8px; flex-shrink: 0; }
+.score { display: grid; justify-items: center; width: 76px; height: 84px; padding: 8px 4px; border-radius: 8px; background: #e6f9edeb; }
+.score.record { background: #fff5cdeb; }
 .score span, #status { font-size: 10px; font-weight: 800; }
-#score { font-size: 44px; font-weight: 750; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.score output { font-size: 40px; font-weight: 750; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tools { position: absolute; top: max(122px, calc(env(safe-area-inset-top) + 96px)); right: 32px; display: flex; gap: 8px; }
+.tool { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid #173f4259; border-radius: 8px; color: #183f42; background: #e6f9edef; cursor: pointer; touch-action: manipulation; }
+.tool svg { width: 21px; height: 21px; stroke-width: 2; }
+.tool:hover:not(:disabled) { background: #ffffff; }
+.tool:disabled { opacity: 0.48; cursor: default; }
+button:focus-visible { outline: 3px solid white; outline-offset: 4px; }
 #overlay { position: absolute; left: 50%; bottom: max(48px, 8%); transform: translateX(-50%); display: flex; align-items: center; gap: 24px; width: max-content; max-width: calc(100% - 40px); }
 #overlay[hidden] { display: none; }
 #state-title { margin: 4px 0 0; font-size: 36px; line-height: 1.1; font-weight: 800; white-space: nowrap; }
@@ -23,16 +31,20 @@ canvas { display: block; width: 100%; height: 100%; touch-action: none; outline:
 #action svg { width: 27px; height: 27px; stroke-width: 2.2; }
 #action:hover { background: #ff917c; transform: translateY(-2px); box-shadow: 0 7px 0 #173f42; }
 #action:active { transform: translateY(4px); box-shadow: 0 1px 0 #173f42; }
-#action:focus-visible { outline: 3px solid white; outline-offset: 5px; }
 @media (max-width: 600px) {
-  .hud { inset: max(22px, env(safe-area-inset-top)) 22px auto; }
-  .brand { font-size: 13px; gap: 8px; }
-  #score { font-size: 38px; }
+  .hud { inset: max(22px, env(safe-area-inset-top)) 18px auto; gap: 8px; }
+  .brand { font-size: 12px; gap: 7px; }
+  #brand-icon svg { width: 22px; height: 22px; }
+  .scoreboard { gap: 6px; }
+  .score { width: 62px; height: 72px; }
+  .score output { font-size: 32px; }
+  .tools { top: max(106px, calc(env(safe-area-inset-top) + 84px)); right: 18px; }
   #state-title { font-size: 30px; }
   #overlay { bottom: max(48px, 9%); gap: 20px; }
 }
 @media (max-height: 500px) {
   .hud { top: 16px; }
+  .tools { top: 112px; }
   #overlay { bottom: 24px; gap: 16px; }
   #state-title { font-size: 26px; }
   #action { width: 52px; height: 52px; }

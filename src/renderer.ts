@@ -111,7 +111,7 @@ export function createRenderer(canvas: HTMLCanvasElement) {
     render(state: SimulationState, now = 0) {
       bird.position.set(state.bird.x, 380 - state.bird.y, 60);
       bird.rotation.z = -state.bird.angle;
-      wing.rotation.z = Math.sin(now * 0.025) * (state.phase === 'crashed' ? 0 : 0.4);
+      if (state.phase !== 'paused') wing.rotation.z = Math.sin(now * 0.025) * (state.phase === 'crashed' ? 0 : 0.4);
       if (state.phase === 'ready') bird.position.y += Math.sin(now * 0.0025) * 5;
       const ids = new Set(state.gates.map((gate) => gate.id));
       for (const [id, group] of pipeMeshes) {
