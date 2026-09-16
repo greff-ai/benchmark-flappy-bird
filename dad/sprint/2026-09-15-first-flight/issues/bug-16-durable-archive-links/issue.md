@@ -31,3 +31,11 @@ Refresh the benchmark's installed dad payload from the corrected source, preserv
 Related: #1
 
 Working branch: `bug/16-durable-archive-links`
+
+## Implementation outcome
+
+Refreshed the corrected archive and PR-body instructions. All 39 installed dad files match source; seven unrelated installed files retain their hashes. Live preflight reproduced PR #15's three relative hrefs and verified three GitHub-rendered absolute candidate links and their exact target bytes at a published commit.
+
+Typecheck, 26 unit tests, and strict OpenSpec validation pass. This documentation-only change requires no game specification sync. Its own archive links will be checked across both remote bodies and both local mirrors before merge and after remote branch deletion.
+
+Deviations from original issue: none. Historical merged PR bodies remain historical; the final sprint PR will provide commit-pinned archive links.
