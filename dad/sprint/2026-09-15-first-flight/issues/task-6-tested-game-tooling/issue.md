@@ -27,3 +27,7 @@ Use current compatible packages and a lockfile. Prefer small modules separating 
 Related: #1
 
 Working branch: task/6-tested-game-tooling
+
+## Implementation deviations
+
+None. The application remains a minimal rendered physics foundation; gameplay belongs to the following feature.
