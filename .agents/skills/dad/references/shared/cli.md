@@ -15,6 +15,15 @@ when a complete search is needed to establish identity or uniqueness.
 ## Settings
 
 ```bash
+node <dad-skill-dir>/scripts/dad.mjs init --tracker github --project <number> --json
+```
+Consumes: `ok`, `checks`, `dadDir`, `settingsFile`, `capabilities`;
+on failure `error.details` contains the setup report.
+Only for explicit setup. Optional `--project-owner <login>` selects the board
+owner; `--issues-repo <owner/repo>` selects a separate issue repository.
+Reruns preserve existing settings rather than replacing them with flag values.
+
+```bash
 node <dad-skill-dir>/scripts/dad.mjs config get git.mainBranch --explain --json
 ```
 Consumes: `value`, `dadDir`, `resolvedBy`, `targetFile`.

@@ -1,6 +1,6 @@
 import { expect, test, type Locator, type Page } from '@playwright/test';
-import { PNG } from 'pngjs';
 import { COURSE, type SimulationState } from '../src/simulation';
+import { pixels, expectFraming } from './rendering';
 
 test.describe.configure({ mode: 'default' });
 
@@ -12,61 +12,6 @@ test.beforeEach(async ({ page }) => {
 
 async function state(page: Page): Promise<SimulationState> {
   return page.evaluate(() => window.flight.state);
-}
-async function pixels(canvas: Locator) {
-  const image = PNG.sync.read(await canvas.screenshot());
-  let bird = 0, pipes = 0, sumX = 0, sumY = 0;
-  let minX = image.width, minY = image.height, maxX = 0, maxY = 0;
-  for (let y = 0; y < image.height; y++) {
-    for (let x = 0; x < image.width; x++) {
-      const offset = (y * image.width + x) * 4;
-      const [r, g, b] = image.data.subarray(offset, offset + 3);
-      if (r > 185 && g > 130 && b < 150 && r > g * 1.05) {
-        bird++; sumX += x; sumY += y;
-        minX = Math.min(minX, x); maxX = Math.max(maxX, x);
-        minY = Math.min(minY, y); maxY = Math.max(maxY, y);
-      }
-      if (g > r * 1.2 && g > b * 1.15 && y < image.height * 0.7) pipes++;
-    }
-  }
-  return { bird, pipes, x: sumX / bird, y: sumY / bird, minX, maxX, minY, maxY,
-    width: image.width, height: image.height };
-}
-async function expectFraming(page: Page, canvas: Locator) {
-  await expect.poll(() => canvas.evaluate((element) => {
-    const c = element as HTMLCanvasElement;
-    const ratio = Math.min(devicePixelRatio, 2);
-    return c.width === Math.floor(innerWidth * ratio) && c.height === Math.floor(innerHeight * ratio)
-      && document.documentElement.scrollWidth === innerWidth
-      && document.documentElement.scrollHeight === innerHeight;
-  })).toBe(true);
-  const image = await pixels(canvas);
-  expect(image.bird).toBeGreaterThan(150);
-  expect(image.pipes).toBeGreaterThan(300);
-  expect(image.minX).toBeGreaterThan(0);
-  expect(image.maxX).toBeLessThan(image.width - 1);
-  expect(image.minY).toBeGreaterThan(0);
-  expect(image.maxY).toBeLessThan(image.height - 1);
-  for (const control of await page.locator('button:visible').all()) {
-    const bounds = (await control.boundingBox())!;
-    const viewport = page.viewportSize()!;
-    expect(bounds.width).toBeGreaterThanOrEqual(44);
-    expect(bounds.height).toBeGreaterThanOrEqual(44);
-    expect(bounds.x).toBeGreaterThanOrEqual(0);
-    expect(bounds.x + bounds.width).toBeLessThanOrEqual(viewport.width);
-    expect(bounds.y + bounds.height).toBeLessThanOrEqual(viewport.height);
-  }
-  const boxes = await page.locator('.brand, .scoreboard, .tools').evaluateAll((elements) =>
-    elements.map((element) => {
-      const { x, y, width, height } = element.getBoundingClientRect();
-      return { x, y, width, height };
-    }));
-  for (let i = 0; i < boxes.length; i++) {
-    for (let j = i + 1; j < boxes.length; j++) {
-      const a = boxes[i], b = boxes[j];
-      expect(a.x + a.width <= b.x || b.x + b.width <= a.x || a.y + a.height <= b.y || b.y + b.height <= a.y).toBe(true);
-    }
-  }
 }
 
 test('real input clears two gates, crashes, restarts, and renders at responsive sizes', async ({ page, isMobile }, testInfo) => {
@@ -202,6 +147,41 @@ test('focus and visibility loss preserve the run until explicit resume', async (
   expect(await state(page)).toEqual(before);
   await page.clock.runFor(32);
   expect((await state(page)).tick - before.tick).toBeLessThanOrEqual(2);
+});
+
+test('compact portrait and landscape keep rendered flight and controls framed', async ({ page, isMobile }, testInfo) => {
+  const errors: string[] = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()); });
+  const evidence = [];
+  for (const viewport of [{ width: 320, height: 568 }, { width: 568, height: 320 }]) {
+    await page.setViewportSize(viewport);
+    await page.goto('/');
+    await page.clock.runFor(32);
+    const canvas = page.getByLabel('First Flight obstacle course');
+    for (const phase of ['ready', 'running', 'paused', 'crashed'] as const) {
+      if (phase === 'running') {
+        if (isMobile) await page.touchscreen.tap(55, 220);
+        else await page.keyboard.press('Space');
+        await page.clock.runFor(160);
+      } else if (phase === 'paused') {
+        if (isMobile) await page.locator('#pause').tap();
+        else await page.locator('#pause').click();
+      } else if (phase === 'crashed') {
+        if (isMobile) await page.locator('#action').tap();
+        else await page.locator('#action').click();
+        await page.clock.runFor(2000);
+      }
+      expect((await state(page)).phase).toBe(phase);
+      const image = await expectFraming(page, canvas);
+      await page.screenshot({ path: testInfo.outputPath(`${viewport.width}x${viewport.height}-${phase}.png`) });
+      evidence.push({ viewport, phase, pixels: image });
+    }
+  }
+  expect(errors).toEqual([]);
+  await testInfo.attach('compact-framing.json', {
+    body: JSON.stringify(evidence, null, 2), contentType: 'application/json',
+  });
 });
 
 for (const failure of ['unavailable', 'invalid-record'] as const) {
