@@ -27,3 +27,15 @@ These finishing controls form one independently testable user-visible milestone.
 
 ## Links
 - https://github.com/greff-ai/benchmark-flappy-bird/issues/7
+
+Working branch: `feat/11-polished-flight-controls`
+
+## Deviations
+
+None. The controls and browser-service safeguards extend the completed obstacle course without changing its physics or geometry.
+
+## Archived openspec change
+
+- [Proposal](openspec/changes/archive/2026-09-15-polished-flight-controls/proposal.md)
+- [Design](openspec/changes/archive/2026-09-15-polished-flight-controls/design.md)
+- [Tasks](openspec/changes/archive/2026-09-15-polished-flight-controls/tasks.md)

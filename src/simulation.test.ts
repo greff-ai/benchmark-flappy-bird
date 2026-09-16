@@ -10,6 +10,26 @@ function fly(simulation: ReturnType<typeof createSimulation>, until: number) {
   }
 }
 describe('flight simulation', () => {
+  it('preserves paused state and resumes the same deterministic run without queued flaps', () => {
+    const a = createSimulation();
+    const b = createSimulation();
+    a.pause(); a.resume();
+    expect(a.getState().phase).toBe('ready');
+    a.start(); b.start();
+    fly(a, 100); fly(b, 100);
+    const before = a.getState();
+    a.flap();
+    a.pause();
+    for (let i = 0; i < 300; i++) { a.flap(); a.step(); }
+    expect(a.getState()).toEqual({ ...before, phase: 'paused' });
+    a.resume();
+    expect(a.getState()).toEqual(before);
+    for (let i = 0; i < 180; i++) {
+      fly(a, 1); fly(b, 1);
+      expect(a.getState()).toEqual(b.getState());
+    }
+    a.dispose(); b.dispose();
+  });
   it('waits for start, flaps upward, then falls under gravity', () => {
     const simulation = createSimulation();
     const ready = simulation.getState();

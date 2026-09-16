@@ -7,7 +7,7 @@ export const COURSE = Object.freeze({
 });
 export interface GateState { id: number; x: number; center: number; scored: boolean }
 export interface SimulationState {
-  phase: 'ready' | 'running' | 'crashed';
+  phase: 'ready' | 'running' | 'paused' | 'crashed';
   tick: number;
   score: number;
   bird: { x: number; y: number; velocity: number; angle: number };
@@ -78,6 +78,12 @@ export function createSimulation(seed = 42) {
     },
     flap() {
       if (phase === 'running') pendingFlap = true;
+    },
+    pause() {
+      if (phase === 'running') { phase = 'paused'; pendingFlap = false; }
+    },
+    resume() {
+      if (phase === 'paused') phase = 'running';
     },
     restart() {
       reset();
