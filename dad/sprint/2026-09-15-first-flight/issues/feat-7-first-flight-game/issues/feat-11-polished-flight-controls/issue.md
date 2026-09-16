@@ -39,3 +39,5 @@ None. The controls and browser-service safeguards extend the completed obstacle 
 - [Proposal](openspec/changes/archive/2026-09-15-polished-flight-controls/proposal.md)
 - [Design](openspec/changes/archive/2026-09-15-polished-flight-controls/design.md)
 - [Tasks](openspec/changes/archive/2026-09-15-polished-flight-controls/tasks.md)
+
+Merged in PR https://github.com/greff-ai/benchmark-flappy-bird/pull/13
