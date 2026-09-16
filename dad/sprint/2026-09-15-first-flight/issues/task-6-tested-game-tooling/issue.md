@@ -25,3 +25,5 @@ Use current compatible packages and a lockfile. Prefer small modules separating 
 - https://github.com/greff-ai/benchmark-flappy-bird/issues/1
 
 Related: #1
+
+Working branch: task/6-tested-game-tooling
