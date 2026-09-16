@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/greff-ai/dad-skillz/main/skills/dad/settings.schema.json",
+  "tracker": {
+    "provider": "github",
+    "github": {
+      "owner": "greff-ai",
+      "repo": "benchmark-flappy-bird",
+      "projectNumber": 1,
+      "projectOwner": "greff-ai"
+    }
+  },
+  "commands": {
+    "test": "npm test",
+    "e2e": "npm run test:e2e",
+    "typecheck": "npm run typecheck"
+  },
+  "forge": {
+    "provider": "github",
+    "github": {
+      "owner": "greff-ai",
+      "repo": "benchmark-flappy-bird"
+    }
+  }
+}
